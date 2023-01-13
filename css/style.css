@@ -1,0 +1,65 @@
+body {
+    padding: 50px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.svg {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    margin-bottom: 50px;
+}
+
+.text{
+    font-size: 24px;
+    fill:#000;
+}
+
+.svg-text{
+    overflow: visible;
+}
+
+.rect {
+    stroke: brown;
+    stroke-width: 10px;
+    fill: none;
+    stroke-dasharray: 700px;
+    stroke-dashoffset: 700px;
+    transition: all 0.5s ease-in-out; 
+}
+
+.svg-rect:hover .rect,
+.svg-circle:hover .circle,
+.apple:hover .apple-path{
+    stroke-dashoffset: 0;
+}
+
+.circle{
+    transition: all 1s ease-in-out;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+
+}
+
+.apple-path {
+    fill: none;
+    stroke: brown;
+    stroke-width: 10px;
+    transition: all 1s ease-in-out;
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+}
+
+.image {
+    width: 600px;
+    clip-path: url(#apple);
+}
+
+.polyline {
+    stroke-linejoin: miter;
+}
